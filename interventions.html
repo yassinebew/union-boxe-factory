@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscription & Tarifs — Union Boxe Factory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=9" />
+  <style>
+    .hero { background-image: url('Échelle WhatsApp Image 2026-05-19 at 142.png') !important; background-position: center 20% !important; }
+    /* ── Adhésions new design ── */
+    .adh-wrap { padding: 64px 0 48px; }
+    .adh-sep { width: 100%; height: 1px; background: linear-gradient(to right, #8B1A1A, transparent); margin: 32px 0 24px; }
+    .adh-promo { font-family: var(--font-body); font-size: 13px; color: #555; text-align: center; margin-bottom: 28px; }
+    .adh-promo span { color: var(--gold); }
+    .adh-cards { display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: 1px; background: #2a2a2a; border: 1px solid #2a2a2a; border-radius: 4px; overflow: hidden; margin-bottom: 2rem; }
+    .adh-card { background: #1C1C1C; padding: 2rem 1.75rem 2.5rem; display: flex; flex-direction: column; transition: background .2s; }
+    .adh-card:hover { background: #212121; }
+    .adh-card.adh-featured { background: #242424; position: relative; }
+    .adh-card.adh-featured::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--red); }
+    .adh-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .adh-badge-star { width: 8px; height: 8px; background: var(--gold); clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); flex-shrink: 0; }
+    .adh-badge-ph { height: 28px; margin-bottom: 1.25rem; }
+    .adh-label { font-family: var(--font-cond); font-size: 18px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--cream); margin-bottom: 1rem; }
+    .adh-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 1.5rem; }
+    .adh-price-num { font-family: var(--font-cond); font-size: clamp(60px,7vw,80px); font-weight: 800; line-height: 1; color: var(--cream); }
+    .adh-price-sym { font-family: var(--font-cond); font-size: 22px; font-weight: 600; color: var(--cream); align-self: flex-end; margin-bottom: 8px; }
+    .adh-price-per { font-family: var(--font-body); font-size: 12px; color: #555; align-self: flex-end; margin-bottom: 10px; margin-left: 2px; }
+    .adh-card-sep { width: 32px; height: 1px; background: #333; margin-bottom: 1.25rem; }
+    .adh-info-item { display: flex; align-items: flex-start; gap: 8px; font-family: var(--font-body); font-size: 13px; color: #888; line-height: 1.5; margin-bottom: .5rem; }
+    .adh-info-icon { width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px; color: #555; }
+    .adh-features { list-style: none; padding: 0; margin: .75rem 0 0; flex: 1; }
+    .adh-features li { font-family: var(--font-body); font-size: 13px; color: #777; line-height: 1.5; margin-bottom: .4rem; display: flex; align-items: flex-start; gap: 8px; }
+    .adh-features li::before { content: ''; width: 14px; height: 14px; border-radius: 50%; border: 1px solid #444; flex-shrink: 0; margin-top: 2px; }
+    .adh-card.adh-featured .adh-features li { color: #999; }
+    .adh-card.adh-featured .adh-features li::before { background: var(--red); border-color: var(--red); }
+    .adh-btn { display: block; width: 100%; padding: 13px 20px; border-radius: 3px; font-family: var(--font-cond); font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-align: center; text-decoration: none; margin-top: 2rem; transition: all .2s; }
+    .adh-btn-ghost { background: transparent; color: var(--cream); border: 1px solid #333; }
+    .adh-btn-ghost:hover { border-color: var(--cream); }
+    .adh-btn-gold { background: var(--gold); color: #111; border: none; font-size: 15px; padding: 15px 20px; }
+    .adh-btn-gold:hover { background: #d4a840; }
+    .adh-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 1.25rem 0; border-top: 1px solid #222; }
+    .adh-footer-item { display: flex; align-items: center; gap: 8px; font-family: var(--font-cond); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #555; }
+    .adh-check { width: 14px; height: 14px; border: 1px solid var(--red); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .adh-check::after { content: ''; width: 6px; height: 4px; border-left: 1.5px solid var(--red); border-bottom: 1.5px solid var(--red); transform: rotate(-45deg) translateY(-1px); display: block; }
+    /* ── Modalités new design ── */
+    .mod-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 40px; }
+    .mod-card { background: #1C1C1C; border: 1px solid #252525; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .25s, transform .25s; }
+    .mod-card:hover { border-color: #333; transform: translateY(-3px); }
+    .mod-card.mod-featured { border-color: var(--red); }
+    .mod-card.mod-featured:hover { border-color: #a32020; }
+    .mod-card.mod-or { border-color: rgba(196,154,56,.4); }
+    .mod-card.mod-or:hover { border-color: var(--gold); }
+    .mod-bar { height: 3px; background: #222; }
+    .mod-card.mod-featured .mod-bar { background: var(--red); }
+    .mod-card.mod-or .mod-bar { background: var(--gold); }
+    .mod-inner { padding: 2rem 2rem 2.5rem; display: flex; flex-direction: column; flex: 1; }
+    .mod-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1.25rem; align-self: flex-start; padding: 5px 12px; border-radius: 2px; }
+    .mod-badge-rouge { background: rgba(139,26,26,.15); color: #c47070; border: 1px solid rgba(139,26,26,.25); }
+    .mod-badge-or { background: rgba(196,154,56,.12); color: var(--gold); border: 1px solid rgba(196,154,56,.25); }
+    .mod-badge-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+    .mod-badge-rouge .mod-badge-dot { background: var(--red); }
+    .mod-badge-or .mod-badge-dot { background: var(--gold); }
+    .mod-label { font-family: var(--font-cond); font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #555; margin-bottom: .75rem; }
+    .mod-title { font-family: var(--font-cond); font-size: clamp(22px,3vw,28px); font-weight: 800; text-transform: uppercase; color: var(--cream); margin-bottom: 1rem; line-height: 1.1; }
+    .mod-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 1.5rem; }
+    .mod-price-num { font-family: var(--font-cond); font-size: clamp(52px,6vw,68px); font-weight: 800; line-height: 1; color: var(--cream); }
+    .mod-price-sym { font-family: var(--font-cond); font-size: 22px; font-weight: 700; color: var(--cream); align-self: flex-end; margin-bottom: 8px; }
+    .mod-price-per { font-family: var(--font-cond); font-size: 14px; font-weight: 600; color: #555; align-self: flex-end; margin-bottom: 10px; margin-left: 2px; }
+    .mod-desc { font-family: var(--font-body); font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 1.5rem; }
+    .mod-desc strong { color: var(--cream); font-weight: 500; }
+    .mod-acompte { display: inline-flex; align-items: center; gap: 8px; background: rgba(139,26,26,.1); border-left: 2px solid var(--red); padding: 8px 12px; border-radius: 0 3px 3px 0; font-family: var(--font-body); font-size: 12px; color: #c47070; margin-bottom: 1.5rem; line-height: 1.4; }
+    .mod-features { list-style: none; padding: 0; margin-bottom: 2rem; }
+    .mod-features li { display: flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: 13px; color: #777; padding: 9px 0; border-bottom: 1px solid #1e1e1e; }
+    .mod-features li:first-child { border-top: 1px solid #1e1e1e; }
+    .mod-check { width: 16px; height: 16px; border-radius: 50%; border: 1px solid #333; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .mod-card.mod-featured .mod-check { background: var(--red); border-color: var(--red); }
+    .mod-card.mod-or .mod-check { background: rgba(196,154,56,.2); border-color: var(--gold); }
+    .mod-check-inner { width: 5px; height: 3px; border-left: 1.5px solid var(--cream); border-bottom: 1.5px solid var(--cream); transform: rotate(-45deg) translateY(-1px); }
+    .mod-btn { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 14px 18px; border-radius: 3px; font-family: var(--font-cond); font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border: none; transition: all .2s; margin-top: auto; }
+    .mod-btn-rouge { background: var(--red); color: var(--cream); }
+    .mod-btn-rouge:hover { background: #a32020; }
+    .mod-btn-or { background: var(--gold); color: #111; }
+    .mod-btn-or:hover { background: #d4a840; }
+    .mod-card.mod-devis { border-color: #2a2a2a; }
+    .mod-card.mod-devis:hover { border-color: #3a3a3a; transform: translateY(-3px); }
+    .mod-card.mod-devis .mod-bar { background: #2d7a3a; }
+    .mod-badge-vert { background: rgba(45,122,58,.15); color: #5cb870; border: 1px solid rgba(45,122,58,.25); }
+    .mod-badge-vert .mod-badge-dot { background: #5cb870; }
+    .mod-card.mod-devis .mod-check { background: rgba(45,122,58,.2); border-color: #2d7a3a; }
+    .mod-btn-vert { background: #2d7a3a; color: #fff; }
+    .mod-btn-vert:hover { background: #246330; }
+    @media (max-width: 900px) { .adh-cards { grid-template-columns: 1fr; } .adh-card.adh-featured::before { display: none; } .adh-footer { flex-direction: column; align-items: flex-start; } .mod-cards { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">
+      <a href="index.html"><img src="logoUBF.png" alt="Union Boxe Factory" class="nav__logo-img" /></a>
+    </div>
+    <nav class="nav__links nav__links--full">
+      <a href="index.html">ACCUEIL</a>
+      <a href="association.html">ASSOCIATION</a>
+      <a href="interventions.html" class="active">COURS</a>
+      <a href="stages.html">STAGES</a>
+      <a href="handicap.html">HANDICAP</a>
+      <a href="actualites.html">ACTUALITÉS</a>
+      <a href="soutenir.html">SOUTENIR</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="https://www.helloasso.com/associations/union-boxe-factory/adhesions/adhesion-annuelle-union-boxing-factory" target="_blank" rel="noopener" class="btn btn--red">S'INSCRIRE</a>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="hero hero--compact">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__line"></span>
+        <span class="hero__eyebrow-text">HORAIRES & TARIFS</span>
+      </div>
+      <h1 class="hero__title">NOS<br /><em>COURS</em></h1>
+    </div>
+  </section>
+
+  <!-- ADHÉSIONS -->
+  <section class="values" id="adhesions">
+    <div class="container adh-wrap">
+      <div class="values__header">
+        <span class="section-eyebrow">— Cours du mardi & dimanche</span>
+        <h2 class="section-title">ADHÉSIONS<br /><em>ANNUELLES</em></h2>
+      </div>
+      <div class="adh-sep"></div>
+      <p class="adh-promo">Paiement en plusieurs fois disponible via HelloAsso. <span>Séance découverte gratuite</span> avant engagement.</p>
+
+      <div class="adh-cards">
+
+        <!-- MARDI -->
+        <div class="adh-card">
+          <div class="adh-badge-ph"></div>
+          <div class="adh-label">Cours du mardi</div>
+          <div style="font-family:var(--font-body);font-size:12px;color:var(--gold);letter-spacing:.06em;margin-bottom:12px;">Adultes et compétiteurs · dès 16 ans</div>
+          <div class="adh-price">
+            <span class="adh-price-num">150</span>
+            <span class="adh-price-sym">€</span>
+            <span class="adh-price-per">/ an</span>
+          </div>
+          <div class="adh-card-sep"></div>
+          <div class="adh-info-item">
+            <svg class="adh-info-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 2"/></svg>
+            19h45 – 21h45
+          </div>
+          <div class="adh-info-item">
+            <svg class="adh-info-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5c0-2.5-2-4.5-4.5-4.5z"/><circle cx="8" cy="6" r="1.5"/></svg>
+            Rue de l'Église Saint-Joseph, Haguenau
+          </div>
+          <ul class="adh-features">
+            <li>1 cours par semaine</li>
+            <li>Adultes et compétiteurs (dès 16 ans)</li>
+            <li>Accès aux événements du club</li>
+          </ul>
+          <a href="https://www.helloasso.com/associations/union-boxe-factory/adhesions/adhesion-annuelle-union-boxing-factory" target="_blank" rel="noopener" class="adh-btn adh-btn-ghost">S'inscrire au cours du mardi</a>
+        </div>
+
+        <!-- MARDI + DIMANCHE (featured) -->
+        <div class="adh-card adh-featured">
+          <div class="adh-badge"><div class="adh-badge-star"></div>Meilleure formule</div>
+          <div class="adh-label">Mardi + Dimanche</div>
+          <div style="font-family:var(--font-body);font-size:12px;color:var(--gold);letter-spacing:.06em;margin-bottom:12px;">Les deux créneaux · Tous publics</div>
+          <div class="adh-price">
+            <span class="adh-price-num">190</span>
+            <span class="adh-price-sym">€</span>
+            <span class="adh-price-per">/ an</span>
+          </div>
+          <div class="adh-card-sep"></div>
+          <div class="adh-info-item">
+            <svg class="adh-info-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 2"/></svg>
+            Mardi 19h45 + Dim. 9h30 & 10h30
+          </div>
+          <div class="adh-info-item">
+            <svg class="adh-info-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5c0-2.5-2-4.5-4.5-4.5z"/><circle cx="8" cy="6" r="1.5"/></svg>
+            Rue de l'Église Saint-Joseph, Haguenau
+          </div>
+          <ul class="adh-features">
+            <li>2 cours par semaine</li>
+            <li>Tous publics acceptés</li>
+            <li>Accès aux événements du club</li>
+            <li>Économie de 110 € vs formules séparées</li>
+          </ul>
+          <a href="https://www.helloasso.com/associations/union-boxe-factory/adhesions/adhesion-annuelle-union-boxing-factory" target="_blank" rel="noopener" class="adh-btn adh-btn-gold">Choisir cette formule</a>
+        </div>
+
+        <!-- DIMANCHE -->
+        <div class="adh-card">
+          <div class="adh-badge-ph"></div>
+          <div class="adh-label">Cours du dimanche</div>
+          <div style="font-family:var(--font-body);font-size:12px;color:var(--gold);letter-spacing:.06em;margin-bottom:12px;">Familles — enfants et adultes</div>
+          <div class="adh-price">
+            <span class="adh-price-num">150</span>
+            <span class="adh-price-sym">€</span>
+            <span class="adh-price-per">/ an</span>
+          </div>
+          <div class="adh-card-sep"></div>
+          <div class="adh-info-item">
+            <svg class="adh-info-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 2"/></svg>
+            9h30 – 10h30 · Enfants (6 à 13 ans)
+          </div>
+          <div class="adh-info-item">
+            <svg class="adh-info-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 2"/></svg>
+            10h30 – 12h30 · Adolescents & adultes
+          </div>
+          <div class="adh-info-item">
+            <svg class="adh-info-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5c0-2.5-2-4.5-4.5-4.5z"/><circle cx="8" cy="6" r="1.5"/></svg>
+            Rue de l'Église Saint-Joseph, Haguenau
+          </div>
+          <ul class="adh-features">
+            <li>1 cours par semaine</li>
+            <li>Tous niveaux acceptés</li>
+            <li>Accès aux événements du club</li>
+          </ul>
+          <a href="https://www.helloasso.com/associations/union-boxe-factory/adhesions/adhesion-annuelle-union-boxing-factory" target="_blank" rel="noopener" class="adh-btn adh-btn-ghost">S'inscrire au cours du dimanche</a>
+        </div>
+
+      </div>
+
+      <!-- FOOTER BAR -->
+      <div class="adh-footer">
+        <div class="adh-footer-item"><div class="adh-check"></div>Séance découverte gratuite</div>
+        <div class="adh-footer-item"><div class="adh-check"></div>Rue de l'Église Saint-Joseph, 67500 Haguenau</div>
+        <div class="adh-footer-item"><div class="adh-check"></div>Paiement en ligne via HelloAsso</div>
+        <div class="adh-footer-item"><div class="adh-check"></div>Paiement en plusieurs fois disponible</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="container divider__inner">
+      <span>UNION BOXE FACTORY</span>
+      <span class="divider__dot">✦</span>
+      <span>INTERVENTIONS</span>
+      <span class="divider__dot">✦</span>
+      <span>HAGUENAU</span>
+      <span class="divider__dot">✦</span>
+      <span>TOUS PUBLICS</span>
+    </div>
+  </div>
+
+  <!-- STAGES & COURS PARTICULIERS -->
+  <section class="values" id="autres">
+    <div class="container">
+      <div class="values__header">
+        <span class="section-eyebrow">— Autres formules</span>
+        <h2 class="section-title">STAGES &<br /><em>COURS PARTICULIERS</em></h2>
+      </div>
+      <div class="mod-cards">
+
+        <!-- STAGES -->
+        <div class="mod-card mod-featured">
+          <div class="mod-bar"></div>
+          <div class="mod-inner">
+            <div class="mod-badge mod-badge-rouge"><div class="mod-badge-dot"></div>Réservation obligatoire</div>
+            <div class="mod-label">Stages intensifs</div>
+            <div class="mod-title">Stages en France & à l'étranger</div>
+            <p class="mod-desc">Des stages immersifs pour progresser rapidement, en France et bientôt à l'étranger. Ouverts à tous les niveaux, y compris aux personnes en situation de handicap.</p>
+            <div class="mod-acompte">Acompte de 40 % requis à l'inscription. Solde réglé avant le départ.</div>
+            <ul class="mod-features">
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Réservation préalable obligatoire</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Acompte de 40 % à l'inscription</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Solde réglé avant le départ</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Paiement en ligne via HelloAsso</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Paiement en plusieurs fois disponible</li>
+            </ul>
+            <a href="stages.html" class="mod-btn mod-btn-rouge">Voir les stages disponibles <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- COURS PARTICULIERS -->
+        <div class="mod-card mod-or">
+          <div class="mod-bar"></div>
+          <div class="mod-inner">
+            <div class="mod-badge mod-badge-or"><div class="mod-badge-dot"></div>Sur mesure</div>
+            <div class="mod-label">Cours particuliers</div>
+            <div class="mod-title">Coaching individuel</div>
+            <div class="mod-price">
+              <span class="mod-price-num">50</span>
+              <span class="mod-price-sym">€</span>
+              <span class="mod-price-per">/ heure</span>
+            </div>
+            <p class="mod-desc">Sur réservation, en fonction des disponibilités de l'encadrant. <strong>Adapté à votre niveau et vos objectifs.</strong></p>
+            <ul class="mod-features">
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>À domicile</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>En extérieur</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Dans la salle de boxe</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Adapté à votre niveau et vos objectifs</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Paiement en ligne via HelloAsso</li>
+            </ul>
+            <a href="contact.html?objet=cours" class="mod-btn mod-btn-or">Demander un créneau <span>→</span></a>
+          </div>
+        </div>
+
+        <!-- INTERVENTIONS EN ÉTABLISSEMENTS -->
+        <div class="mod-card mod-devis">
+          <div class="mod-bar"></div>
+          <div class="mod-inner">
+            <div class="mod-badge mod-badge-vert"><div class="mod-badge-dot"></div>Sur devis</div>
+            <div class="mod-label">Interventions</div>
+            <div class="mod-title">Interventions en établissements</div>
+            <p class="mod-desc">Ateliers de boxe éducative dans les écoles, collèges, MJC et structures sociales. Encadrement professionnel adapté à chaque public.</p>
+            <ul class="mod-features">
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Écoles, collèges, lycées</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>MJC et centres sociaux</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Structures médico-sociales</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Public en situation de handicap accepté</li>
+              <li><div class="mod-check"><div class="mod-check-inner"></div></div>Tarif sur devis selon le format</li>
+            </ul>
+            <a href="contact.html?objet=intervention" class="mod-btn mod-btn-vert">Faire une demande <span>→</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="inscription">
+    <div class="cta__bg"></div>
+    <div class="container cta__inner">
+      <div class="cta__text">
+        <span class="section-eyebrow">— Inscription</span>
+        <h2 class="cta__title">PRÊT À<br />COMMENCER ?</h2>
+        <p class="cta__sub">Choisissez votre formule et réservez en ligne en quelques minutes.</p>
+      </div>
+      <div class="cta__actions">
+        <a href="reservation.html" class="btn btn--red-solid btn--lg">S'INSCRIRE MAINTENANT</a>
+        <a href="contact.html" class="btn btn--ghost">NOUS CONTACTER</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="logoUBF.png" alt="Union Boxe Factory" class="footer__logo-img" />
+        <p class="footer__brand-desc">L'EXCELLENCE DE LA BOXE MODERNE<br />DANS UN CADRE HÉRITAGE ÉLITE.</p>
+        <p class="footer__estd">EST. MMXXIV</p>
+        <div class="footer__icons">
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071837838686" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>PAGES</h4>
+        <ul>
+          <li><a href="association.html">L'Association</a></li>
+          <li><a href="interventions.html">Interventions</a></li>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="handicap.html">Boxe & Handicap</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="soutenir.html">Nous soutenir</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__newsletter">
+        <h4>NEWSLETTER</h4>
+        <p>Actualités, plannings et offres exclusives.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="VOTRE EMAIL" aria-label="Email" />
+          <button type="submit">GO</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© 2026 UNION BOXE FACTORY. L'ART DE LA NOBLE SCIENCE.</p>
+      <div><a href="mentions-legales.html#confidentialite">PRIVACY</a><a href="mentions-legales.html">TERMS</a></div>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+</body>
+</html>

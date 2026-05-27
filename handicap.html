@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boxe & Handicap — Union Boxe Factory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=9" />
+  <style>
+    .hero { background-image: url('Échelle WhatsApp Image 2026-05-19 at 14.png') !important; background-position: center 20% !important; }
+    .handicap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 2px; }
+    .handicap-bloc { background: var(--bg2); padding: 48px 44px; }
+    .handicap-bloc h3 { font-family: var(--font-cond); font-size: 13px; letter-spacing: 0.22em; color: var(--red); text-transform: uppercase; margin-bottom: 16px; }
+    .handicap-bloc p { font-size: 14px; color: var(--cream-dim); line-height: 1.75; }
+    .handicap-bloc ul { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
+    .handicap-bloc ul li { font-family: var(--font-cond); font-size: 15px; letter-spacing: 0.12em; color: var(--cream); text-transform: uppercase; padding-left: 20px; position: relative; }
+    .handicap-bloc ul li::before { content: '✦'; position: absolute; left: 0; color: var(--red); font-size: 9px; top: 3px; }
+    .partners-zone { background: var(--bg2); border: 1px dashed rgba(139,26,26,0.3); padding: 52px 44px; text-align: center; }
+    .partners-zone p { font-family: var(--font-cond); font-size: 12px; letter-spacing: 0.2em; color: rgba(232,220,200,0.22); text-transform: uppercase; }
+    @media (max-width: 768px) { .handicap-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">
+      <a href="index.html"><img src="logoUBF.png" alt="Union Boxe Factory" class="nav__logo-img" /></a>
+    </div>
+    <nav class="nav__links nav__links--full">
+      <a href="index.html">ACCUEIL</a>
+      <a href="association.html">ASSOCIATION</a>
+      <a href="interventions.html">COURS</a>
+      <a href="stages.html">STAGES</a>
+      <a href="handicap.html" class="active">HANDICAP</a>
+      <a href="actualites.html">ACTUALITÉS</a>
+      <a href="soutenir.html">SOUTENIR</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="https://www.helloasso.com/associations/union-boxe-factory/adhesions/adhesion-annuelle-union-boxing-factory" target="_blank" rel="noopener" class="btn btn--red">S'INSCRIRE</a>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="hero hero--compact">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__line"></span>
+        <span class="hero__eyebrow-text">LE SPORT EST UNIVERSEL</span>
+      </div>
+      <h1 class="hero__title">BOXE &amp;<br /><em>HANDICAP</em></h1>
+    </div>
+  </section>
+
+  <section class="values" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="values__header">
+        <span class="section-eyebrow">— Inclusion &amp; accompagnement</span>
+        <h2 class="section-title">PARCE QUE LE SPORT<br /><em>EST UNIVERSEL</em></h2>
+        <p style="font-size:14px;color:var(--cream-dim);margin-top:16px;max-width:600px;line-height:1.75;">
+          Union Boxe Factory accueille et accompagne les personnes en situation de handicap.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="handicap-grid">
+
+        <div class="handicap-bloc">
+          <h3>Notre approche</h3>
+          <p>Nous proposons des ateliers spécifiquement aménagés, avec un encadrement adapté à chaque situation. Notre objectif : permettre à chacun de pratiquer dans les meilleures conditions, en toute sécurité.</p>
+        </div>
+
+        <div class="handicap-bloc">
+          <h3>Ce que nous proposons</h3>
+          <ul>
+            <li>Ateliers adaptés selon le type de handicap</li>
+            <li>Encadrement formé à l'accueil des publics spécifiques</li>
+            <li>Matériel aménagé si nécessaire</li>
+            <li>Suivi individualisé</li>
+          </ul>
+        </div>
+
+        <div class="handicap-bloc" style="grid-column: 1 / -1;">
+          <h3>Partenariats</h3>
+          <p style="margin-bottom:24px;">
+            Nous travaillons en lien avec des structures spécialisées. Vous êtes une structure médico-sociale et souhaitez collaborer ?
+          </p>
+          <div class="partners-zone" style="text-align:left;padding:32px 0;border:none;background:transparent;">
+            <p style="margin-bottom:24px;color:rgba(232,220,200,0.22);">STRUCTURES PARTENAIRES — ZONE À COMPLÉTER</p>
+          </div>
+          <a href="contact.html?objet=handicap" class="btn btn--red-solid" style="display:inline-block;">NOUS CONTACTER</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <div class="container quote-section__inner">
+      <div class="quote-section__line"></div>
+      <blockquote>
+        <p>"La boxe n'est pas une question de capacité physique.<br />C'est une question de volonté."</p>
+        <cite>— Union Boxe Factory</cite>
+      </blockquote>
+      <div class="quote-section__line"></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta__bg"></div>
+    <div class="container cta__inner">
+      <div class="cta__text">
+        <span class="section-eyebrow">— Prenons contact</span>
+        <h2 class="cta__title">UNE QUESTION<br />SUR L'ACCUEIL ?</h2>
+        <p class="cta__sub">Nous répondons à toutes vos questions sur l'accessibilité et l'accompagnement.</p>
+      </div>
+      <div class="cta__actions">
+        <a href="contact.html?objet=handicap" class="btn btn--red-solid btn--lg">NOUS CONTACTER</a>
+        <a href="association.html" class="btn btn--ghost">DÉCOUVRIR L'ASSOCIATION</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="logoUBF.png" alt="Union Boxe Factory" class="footer__logo-img" />
+        <p class="footer__brand-desc">L'EXCELLENCE DE LA BOXE MODERNE<br />DANS UN CADRE HÉRITAGE ÉLITE.</p>
+        <p class="footer__estd">EST. MMXXIV</p>
+        <div class="footer__icons">
+          <a href="https://www.facebook.com/profile.php?id=100071837838686" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>PAGES</h4>
+        <ul>
+          <li><a href="association.html">L'Association</a></li>
+          <li><a href="interventions.html">Interventions</a></li>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="handicap.html">Boxe & Handicap</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="soutenir.html">Nous soutenir</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__newsletter">
+        <h4>NEWSLETTER</h4>
+        <p>Actualités, plannings et offres exclusives.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="VOTRE EMAIL" aria-label="Email" />
+          <button type="submit">GO</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© 2026 UNION BOXE FACTORY. L'ART DE LA NOBLE SCIENCE.</p>
+      <div><a href="mentions-legales.html#confidentialite">PRIVACY</a><a href="mentions-legales.html">TERMS</a></div>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+</body>
+</html>

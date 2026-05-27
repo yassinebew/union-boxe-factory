@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(taskkill /F /IM python.exe)",
+      "Bash(where node:*)",
+      "Bash(where npx:*)",
+      "Bash(for f:*)",
+      "Bash(do sed:*)",
+      "Bash(done)",
+      "WebSearch",
+      "Read(//c/Users/Yassi/**)",
+      "Bash(find C:/Users/Yassi/Desktop -maxdepth 2 -iname *cinematic* -o -iname *film-location* -o -iname *film_location*)",
+      "Bash(find C:/Users/Yassi/Desktop -maxdepth 2 -iname *young-boxer* -o -iname *girl-boxer*)",
+      "Bash(find C:/Users/Yassi/Desktop -maxdepth 2 -iname *two-muscular* -o -iname *boxers-have-competition*)",
+      "Bash(find C:/Users/Yassi/Desktop -maxdepth 2 -iname *sportive-blond* -o -iname *blond-woman*boxing*)",
+      "Bash(find C:/Users/Yassi/Desktop -maxdepth 2 -iname *bandaging* -o -iname *close-up-boxer*)",
+      "Bash(find C:/Users/Yassi/Desktop -maxdepth 2 -iname *front-view-kids* -o -iname *kids-learning-boxing*)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer"
+    ]
+  }
+}

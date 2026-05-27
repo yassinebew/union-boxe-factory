@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Association — Union Boxe Factory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=9" />
+  <style>
+    .hero { background-image: url('IMG_016022.png') !important; background-position: center 20% !important; }
+    .assoc-intro { background: var(--bg2); padding: 64px 44px; }
+    .assoc-intro p { font-size: 15px; color: var(--cream-dim); line-height: 1.85; max-width: 780px; }
+    .assoc-intro p + p { margin-top: 18px; }
+    .disciplines-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+    .disciplines-list li { font-family: var(--font-cond); font-size: 17px; font-weight: 600; letter-spacing: 0.1em; color: var(--cream); text-transform: uppercase; padding: 18px 0; border-bottom: 1px solid rgba(139,26,26,0.15); display: flex; align-items: center; gap: 16px; }
+    .disciplines-list li:first-child { border-top: 1px solid rgba(139,26,26,0.15); }
+    .disciplines-list li .disc-tag { font-size: 9px; letter-spacing: 0.2em; color: var(--gold); border: 1px solid rgba(212,175,55,0.4); padding: 3px 10px; font-weight: 400; }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">
+      <a href="index.html"><img src="logoUBF.png" alt="Union Boxe Factory" class="nav__logo-img" /></a>
+    </div>
+    <nav class="nav__links nav__links--full">
+      <a href="index.html">ACCUEIL</a>
+      <a href="association.html" class="active">ASSOCIATION</a>
+      <a href="interventions.html">COURS</a>
+      <a href="stages.html">STAGES</a>
+      <a href="handicap.html">HANDICAP</a>
+      <a href="actualites.html">ACTUALITÉS</a>
+      <a href="soutenir.html">SOUTENIR</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="https://www.helloasso.com/associations/union-boxe-factory/adhesions/adhesion-annuelle-union-boxing-factory" target="_blank" rel="noopener" class="btn btn--red">S'INSCRIRE</a>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="hero hero--compact">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__line"></span>
+        <span class="hero__eyebrow-text">SPORTS DE COMBAT · ÉDUCATION · INSERTION</span>
+      </div>
+      <h1 class="hero__title">QUI SOMMES-<br /><em>NOUS ?</em></h1>
+    </div>
+  </section>
+
+  <!-- TEXTE PRINCIPAL -->
+  <section class="values" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="values__header">
+        <span class="section-eyebrow">— L'association</span>
+        <h2 class="section-title">UNION BOXE<br /><em>FACTORY</em></h2>
+      </div>
+      <div class="assoc-intro">
+        <p>Union Boxe Factory est une association sportive et éducative spécialisée dans les sports de combat : Muay Thaï, K1, boxe anglaise et boxe éducative. L'ensemble des activités est encadré par des professionnels qualifiés, dans un cadre sécurisé et structuré.</p>
+        <p>Notre conviction est simple : les sports de combat sont un véritable levier d'éducation, d'insertion et de cohésion sociale. Ils permettent de développer la discipline, la confiance en soi et le respect, tout en accompagnant chaque pratiquant dans sa progression sportive, personnelle et professionnelle.</p>
+        <p>L'association est ouverte à tous : enfants dès 6 ans, adolescents, adultes, compétiteurs, ainsi que personnes en situation de handicap. Nous défendons une pratique accessible, inclusive et engagée, au service de l'égalité des chances et de la santé par le sport.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALEURS -->
+  <section class="values" style="padding-top: 0; padding-bottom: 0;">
+    <div class="container">
+      <div class="values__grid" style="grid-template-columns: repeat(4,1fr);">
+        <div class="values__item">
+          <span class="values__num">01</span>
+          <h3>RESPECT</h3>
+          <p>Sur le ring comme en dehors.</p>
+        </div>
+        <div class="values__item">
+          <span class="values__num">02</span>
+          <h3>INCLUSION</h3>
+          <p>Chacun a sa place, quels que soient son âge ou sa situation.</p>
+        </div>
+        <div class="values__item">
+          <span class="values__num">03</span>
+          <h3>DÉPASSEMENT</h3>
+          <p>Progresser à son rythme, repousser ses limites.</p>
+        </div>
+        <div class="values__item">
+          <span class="values__num">04</span>
+          <h3>SOLIDARITÉ</h3>
+          <p>Une équipe, une famille.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="container divider__inner">
+      <span>MUAY THAÏ</span>
+      <span class="divider__dot">✦</span>
+      <span>K1</span>
+      <span class="divider__dot">✦</span>
+      <span>BOXE ANGLAISE</span>
+      <span class="divider__dot">✦</span>
+      <span>BOXE ÉDUCATIVE</span>
+    </div>
+  </div>
+
+  <!-- DISCIPLINES -->
+  <section class="values">
+    <div class="container">
+      <div class="values__header">
+        <span class="section-eyebrow">— Ce qu'on pratique</span>
+        <h2 class="section-title">NOS<br /><em>DISCIPLINES</em></h2>
+      </div>
+      <ul class="disciplines-list">
+        <li>Muay Thaï &amp; K1 <span class="disc-tag">Discipline principale</span></li>
+        <li>Boxe anglaise</li>
+        <li>Boxe éducative</li>
+        <li>Préparation physique</li>
+        <li>Séances découverte</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta__bg"></div>
+    <div class="container cta__inner">
+      <div class="cta__text">
+        <span class="section-eyebrow">— Rejoignez-nous</span>
+        <h2 class="cta__title">VOTRE PLACE<br />EST ICI.</h2>
+        <p class="cta__sub">Premier cours offert. Aucun engagement.</p>
+      </div>
+      <div class="cta__actions">
+        <a href="interventions.html" class="btn btn--red-solid btn--lg">VOIR LES CRÉNEAUX</a>
+        <a href="contact.html" class="btn btn--ghost">NOUS CONTACTER</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="logoUBF.png" alt="Union Boxe Factory" class="footer__logo-img" />
+        <p class="footer__brand-desc">L'EXCELLENCE DE LA BOXE MODERNE<br />DANS UN CADRE HÉRITAGE ÉLITE.</p>
+        <p class="footer__estd">EST. MMXXIV</p>
+        <div class="footer__icons">
+          <a href="https://www.facebook.com/profile.php?id=100071837838686" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>PAGES</h4>
+        <ul>
+          <li><a href="association.html">L'Association</a></li>
+          <li><a href="interventions.html">Interventions</a></li>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="handicap.html">Boxe & Handicap</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="soutenir.html">Nous soutenir</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__newsletter">
+        <h4>NEWSLETTER</h4>
+        <p>Actualités, plannings et offres exclusives.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="VOTRE EMAIL" aria-label="Email" />
+          <button type="submit">GO</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© 2026 UNION BOXE FACTORY. L'ART DE LA NOBLE SCIENCE.</p>
+      <div><a href="mentions-legales.html#confidentialite">PRIVACY</a><a href="mentions-legales.html">TERMS</a></div>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+</body>
+</html>

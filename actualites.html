@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actualités — Union Boxe Factory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=9" />
+  <style>
+    .hero { background-image: url('front-view-man-training-boxing-ring.jpg') !important; }
+    /* ── Actualités grid ── */
+    .actu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+
+    /* ─────────────────────────────────────────
+       ARTICLE CARD
+       Pour ajouter un article, copier le bloc :
+       <article class="actu-card"> ... </article>
+       et coller AVANT les autres.
+    ───────────────────────────────────────── */
+    .actu-card {
+      background: var(--bg2);
+      display: flex;
+      flex-direction: column;
+    }
+    .actu-card__img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+      background: var(--bg3);
+    }
+    .actu-card__img--placeholder {
+      aspect-ratio: 16 / 10;
+      background: var(--bg3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-cond);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: rgba(232,220,200,0.2);
+      text-transform: uppercase;
+    }
+    .actu-card__body {
+      padding: 28px 32px 36px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .actu-card__date {
+      font-family: var(--font-cond);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .actu-card__title {
+      font-family: var(--font-cond);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--cream);
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .actu-card__text {
+      font-size: 14px;
+      color: var(--cream-dim);
+      line-height: 1.72;
+      flex: 1;
+    }
+
+    /* Zone vide — affiché quand aucun article */
+    .actu-empty {
+      grid-column: 1 / -1;
+      background: var(--bg2);
+      border: 1px dashed rgba(139,26,26,0.3);
+      padding: 72px 44px;
+      text-align: center;
+    }
+    .actu-empty p {
+      font-family: var(--font-cond);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: rgba(232,220,200,0.22);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) { .actu-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 580px) { .actu-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">
+      <a href="index.html"><img src="logoUBF.png" alt="Union Boxe Factory" class="nav__logo-img" /></a>
+    </div>
+    <nav class="nav__links nav__links--full">
+      <a href="index.html">ACCUEIL</a>
+      <a href="association.html">ASSOCIATION</a>
+      <a href="interventions.html">COURS</a>
+      <a href="stages.html">STAGES</a>
+      <a href="handicap.html">HANDICAP</a>
+      <a href="actualites.html" class="active">ACTUALITÉS</a>
+      <a href="soutenir.html">SOUTENIR</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="https://www.helloasso.com/associations/union-boxe-factory/adhesions/adhesion-annuelle-union-boxing-factory" target="_blank" rel="noopener" class="btn btn--red">S'INSCRIRE</a>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="hero hero--compact">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__line"></span>
+        <span class="hero__eyebrow-text">ÉVÉNEMENTS · COMPÉTITIONS · PROJETS</span>
+      </div>
+      <h1 class="hero__title">ACTUALITÉS</h1>
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="container">
+
+      <div class="values__header">
+        <span class="section-eyebrow">— Vie de l'association</span>
+        <h2 class="section-title">SUIVEZ<br /><em>NOS ACTUALITÉS</em></h2>
+        <p style="font-size:14px;color:var(--cream-dim);margin-top:16px;max-width:560px;">
+          Suivez la vie de l'association — événements, compétitions, projets et résultats.
+        </p>
+      </div>
+
+      <!--
+      ════════════════════════════════════════════════════════════
+      ZONE ARTICLES — MODE D'EMPLOI POUR LE CLIENT
+      ════════════════════════════════════════════════════════════
+
+      Pour ajouter un article :
+        1. Copier un bloc <article class="actu-card"> ... </article>
+        2. Le coller EN PREMIER dans .actu-grid (les plus récents en haut)
+        3. Remplacer :
+           - actu-card__date  → la date (ex : 15 Mars 2025)
+           - actu-card__title → le titre court
+           - actu-card__text  → le texte (3–5 lignes)
+           - <img>            → votre photo (remplacer actu-card__img--placeholder)
+
+      Note : photos uniquement avec droit à l'image régularisé.
+      Les posts Facebook existants peuvent servir de premiers articles.
+      ════════════════════════════════════════════════════════════
+      -->
+
+      <div class="actu-grid">
+
+        <!-- ═══════════ EXEMPLE D'ARTICLE (à remplacer) ═══════════
+        <article class="actu-card">
+          <img src="votre-photo.jpg" alt="Description" class="actu-card__img" />
+          <div class="actu-card__body">
+            <span class="actu-card__date">15 Mars 2025</span>
+            <h3 class="actu-card__title">Titre de l'article</h3>
+            <p class="actu-card__text">
+              Texte de présentation sur 3 à 5 lignes. Décrivez l'événement,
+              la compétition ou le projet. Mentionnez les participants,
+              les résultats ou les prochaines étapes.
+            </p>
+          </div>
+        </article>
+        ══════════════════════════════════════════════════════════ -->
+
+        <!-- Zone vide — supprimer ce bloc dès qu'un article est ajouté -->
+        <div class="actu-empty">
+          <p>Les actualités arrivent bientôt —<br />premiers articles à venir</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="container divider__inner">
+      <span>UNION BOXE FACTORY</span>
+      <span class="divider__dot">✦</span>
+      <span>ACTUALITÉS</span>
+      <span class="divider__dot">✦</span>
+      <span>RÉSULTATS</span>
+      <span class="divider__dot">✦</span>
+      <span>ÉVÉNEMENTS</span>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="logoUBF.png" alt="Union Boxe Factory" class="footer__logo-img" />
+        <p class="footer__brand-desc">L'EXCELLENCE DE LA BOXE MODERNE<br />DANS UN CADRE HÉRITAGE ÉLITE.</p>
+        <p class="footer__estd">EST. MMXXIV</p>
+        <div class="footer__icons">
+          <a href="https://www.facebook.com/profile.php?id=100071837838686" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>PAGES</h4>
+        <ul>
+          <li><a href="association.html">L'Association</a></li>
+          <li><a href="interventions.html">Interventions</a></li>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="handicap.html">Boxe & Handicap</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="soutenir.html">Nous soutenir</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__newsletter">
+        <h4>NEWSLETTER</h4>
+        <p>Actualités, plannings et offres exclusives.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="VOTRE EMAIL" aria-label="Email" />
+          <button type="submit">GO</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© 2026 UNION BOXE FACTORY. L'ART DE LA NOBLE SCIENCE.</p>
+      <div><a href="mentions-legales.html#confidentialite">PRIVACY</a><a href="mentions-legales.html">TERMS</a></div>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+</body>
+</html>

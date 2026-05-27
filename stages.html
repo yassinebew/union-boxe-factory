@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les Stages — Union Boxe Factory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=9" />
+  <style>
+    .hero { background-image: url('close-up-boxer-bandaging-hands.jpg') !important; }
+    /* ── Stages new design ── */
+    .stg-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; margin-bottom: 16px; }
+    .stg-card { background: #1C1C1C; border: 1px solid #252525; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .25s, transform .25s; }
+    .stg-card:hover { border-color: #333; transform: translateY(-3px); }
+    .stg-card.stg-featured { border-color: var(--red); }
+    .stg-card.stg-featured:hover { border-color: #a32020; }
+    .stg-card.stg-projet { border-color: #2a2a2a; opacity: .85; }
+    .stg-card.stg-projet:hover { opacity: 1; }
+    .stg-bar { height: 3px; background: #222; }
+    .stg-card.stg-featured .stg-bar { background: var(--red); }
+    .stg-inner { padding: 2rem 2rem 2.5rem; display: flex; flex-direction: column; flex: 1; }
+    .stg-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: 5px 12px; border-radius: 2px; margin-bottom: 1.25rem; align-self: flex-start; }
+    .stg-badge-dispo { background: rgba(139,26,26,.15); color: #c47070; border: 1px solid rgba(139,26,26,.3); }
+    .stg-badge-projet { background: #1e1e1e; color: #555; border: 1px solid #2a2a2a; }
+    .stg-badge-indispo { background: rgba(100,60,0,.2); color: #a07840; border: 1px solid rgba(160,120,60,.3); }
+    .stg-badge-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+    .stg-badge-dispo .stg-badge-dot { background: var(--red); animation: stg-pulse 2s ease-in-out infinite; }
+    .stg-badge-projet .stg-badge-dot { background: #444; }
+    @keyframes stg-pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+    .stg-title { font-family: var(--font-cond); font-size: clamp(20px,2.5vw,26px); font-weight: 800; text-transform: uppercase; color: var(--cream); letter-spacing: .04em; margin-bottom: 1rem; line-height: 1.1; }
+    .stg-card.stg-projet .stg-title { color: #888; }
+    .stg-desc { font-family: var(--font-body); font-size: 14px; color: #666; line-height: 1.65; margin-bottom: 1.75rem; flex: 1; }
+    .stg-form { display: flex; gap: 0; border: 1px solid #2e2e2e; border-radius: 3px; overflow: hidden; margin-top: auto; }
+    .stg-form input { flex: 1; background: transparent; border: none; outline: none; padding: 13px 16px; font-family: var(--font-cond); font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--cream); min-width: 0; }
+    .stg-form input::placeholder { color: #444; }
+    .stg-form button { background: var(--red); color: var(--cream); border: none; padding: 13px 20px; font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .2s; flex-shrink: 0; }
+    .stg-form button:hover { background: #a32020; }
+    .stg-btn { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 14px 18px; border-radius: 3px; font-family: var(--font-cond); font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border: none; transition: all .2s; margin-top: auto; background: var(--red); color: var(--cream); }
+    .stg-btn:hover { background: #a32020; }
+    .stg-access { background: #1C1C1C; border: 1px solid #252525; border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 14px; }
+    .stg-access-icon { width: 32px; height: 32px; background: rgba(196,154,56,.1); border: 1px solid rgba(196,154,56,.2); border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .stg-access-icon svg { width: 16px; height: 16px; color: var(--gold); }
+    .stg-access-label { font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: .4rem; }
+    .stg-access-text { font-family: var(--font-body); font-size: 13px; color: #666; line-height: 1.5; }
+    .stg-access-text a { color: var(--cream); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #444; }
+    .stg-access-text a:hover { text-decoration-color: var(--cream); }
+    @media (max-width: 768px) { .stg-cards { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">
+      <a href="index.html"><img src="logoUBF.png" alt="Union Boxe Factory" class="nav__logo-img" /></a>
+    </div>
+    <nav class="nav__links nav__links--full">
+      <a href="index.html">ACCUEIL</a>
+      <a href="association.html">ASSOCIATION</a>
+      <a href="interventions.html">COURS</a>
+      <a href="stages.html" class="active">STAGES</a>
+      <a href="handicap.html">HANDICAP</a>
+      <a href="actualites.html">ACTUALITÉS</a>
+      <a href="soutenir.html">SOUTENIR</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="https://www.helloasso.com/associations/union-boxe-factory/adhesions/adhesion-annuelle-union-boxing-factory" target="_blank" rel="noopener" class="btn btn--red">S'INSCRIRE</a>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="hero hero--compact">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__line"></span>
+        <span class="hero__eyebrow-text">FRANCE &amp; ÉTRANGER</span>
+      </div>
+      <h1 class="hero__title">LES<br /><em>STAGES</em></h1>
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="container">
+      <div class="values__header">
+        <span class="section-eyebrow">— Progresser plus vite</span>
+        <h2 class="section-title">STAGES<br /><em>INTENSIFS</em></h2>
+      </div>
+
+      <div class="stg-cards">
+
+        <!-- STAGES EN FRANCE -->
+        <div class="stg-card stg-projet">
+          <div class="stg-bar"></div>
+          <div class="stg-inner">
+            <div class="stg-badge stg-badge-indispo"><div class="stg-badge-dot" style="background:#a07840;"></div>Indisponible pour le moment</div>
+            <div class="stg-title">Stages en France</div>
+            <p class="stg-desc">Nous organisons des stages intensifs ouverts à tous les niveaux. Format immersif : plusieurs entraînements par jour, encadrement professionnel, progression rapide. Inscrivez-vous pour être informé dès la prochaine session.</p>
+            <form class="stg-form" onsubmit="return false;">
+              <input type="email" placeholder="Votre email" aria-label="Email notification stage France" />
+              <button type="submit">Être informé →</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- STAGES À L'ÉTRANGER -->
+        <div class="stg-card stg-projet">
+          <div class="stg-bar"></div>
+          <div class="stg-inner">
+            <div class="stg-badge stg-badge-projet"><div class="stg-badge-dot"></div>En projet</div>
+            <div class="stg-title">Stages à l'étranger</div>
+            <p class="stg-desc">Union Boxe Factory prépare ses premiers stages à l'étranger. Immersion sportive et culturelle, découverte d'autres traditions de combat. Inscrivez-vous à notre liste d'attente pour être informé en priorité.</p>
+            <form class="stg-form" onsubmit="return false;">
+              <input type="email" placeholder="Votre email" aria-label="Email liste d'attente" />
+              <button type="submit">Être informé →</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ACCESSIBILITÉ -->
+      <div class="stg-access">
+        <div class="stg-access-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <circle cx="12" cy="5" r="1.5"/>
+            <path d="M9 12l3-4 3 4"/>
+            <path d="M9 16l1.5-4h3L15 16"/>
+            <path d="M7 20c1.5-1 3-2 5-2s3.5 1 5 2"/>
+          </svg>
+        </div>
+        <div>
+          <div class="stg-access-label">Accessibilité</div>
+          <p class="stg-access-text">Les stages sont accessibles aux personnes en situation de handicap selon les formats. <a href="contact.html?objet=handicap">Contactez-nous</a> pour en savoir plus.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="container divider__inner">
+      <span>UNION BOXE FACTORY</span>
+      <span class="divider__dot">✦</span>
+      <span>STAGES INTENSIFS</span>
+      <span class="divider__dot">✦</span>
+      <span>FRANCE</span>
+      <span class="divider__dot">✦</span>
+      <span>INTERNATIONAL</span>
+    </div>
+  </div>
+
+  <section class="cta">
+    <div class="cta__bg"></div>
+    <div class="container cta__inner">
+      <div class="cta__text">
+        <span class="section-eyebrow">— Prochaine session</span>
+        <h2 class="cta__title">PRÊT À<br />PROGRESSER ?</h2>
+        <p class="cta__sub">Tous niveaux bienvenus. Contactez-nous pour les dates.</p>
+      </div>
+      <div class="cta__actions">
+        <a href="contact.html?objet=stage" class="btn btn--red-solid btn--lg">M'INSCRIRE</a>
+        <a href="interventions.html" class="btn btn--ghost">VOIR LES COURS</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="logoUBF.png" alt="Union Boxe Factory" class="footer__logo-img" />
+        <p class="footer__brand-desc">L'EXCELLENCE DE LA BOXE MODERNE<br />DANS UN CADRE HÉRITAGE ÉLITE.</p>
+        <p class="footer__estd">EST. MMXXIV</p>
+        <div class="footer__icons">
+          <a href="https://www.facebook.com/profile.php?id=100071837838686" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>PAGES</h4>
+        <ul>
+          <li><a href="association.html">L'Association</a></li>
+          <li><a href="interventions.html">Interventions</a></li>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="handicap.html">Boxe & Handicap</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="soutenir.html">Nous soutenir</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__newsletter">
+        <h4>NEWSLETTER</h4>
+        <p>Actualités, plannings et offres exclusives.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="VOTRE EMAIL" aria-label="Email" />
+          <button type="submit">GO</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© 2026 UNION BOXE FACTORY. L'ART DE LA NOBLE SCIENCE.</p>
+      <div><a href="mentions-legales.html#confidentialite">PRIVACY</a><a href="mentions-legales.html">TERMS</a></div>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+</body>
+</html>

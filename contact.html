@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Union Boxe Factory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=9" />
+  <style>
+    .hero { background-image: url('rivals-touching-by-boxing-gloves.jpg') !important; }
+    /* Contact form — scoped styles only, no global overrides */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding: 72px 0; }
+    .contact-info h3 { font-family: var(--font-cond); font-size: 13px; letter-spacing: 0.22em; color: var(--red); text-transform: uppercase; margin-bottom: 8px; margin-top: 32px; }
+    .contact-info h3:first-child { margin-top: 0; }
+    .contact-info p { font-size: 14px; color: var(--cream-dim); line-height: 1.7; }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select { background: var(--bg2); border: 1px solid rgba(139,26,26,0.22); color: var(--cream); font-family: var(--font-cond); font-size: 13px; letter-spacing: 0.12em; padding: 14px 18px; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box; }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: var(--cream-dim); }
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus { border-color: var(--red); }
+    .contact-form textarea { min-height: 140px; resize: vertical; }
+    .contact-form select option { background: var(--bg); }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">
+      <a href="index.html"><img src="logoUBF.png" alt="Union Boxe Factory" class="nav__logo-img" /></a>
+    </div>
+    <nav class="nav__links nav__links--full">
+      <a href="index.html">ACCUEIL</a>
+      <a href="association.html">ASSOCIATION</a>
+      <a href="interventions.html">COURS</a>
+      <a href="stages.html">STAGES</a>
+      <a href="handicap.html">HANDICAP</a>
+      <a href="actualites.html">ACTUALITÉS</a>
+      <a href="soutenir.html">SOUTENIR</a>
+      <a href="contact.html" class="active">CONTACT</a>
+    </nav>
+    <a href="https://www.helloasso.com/associations/union-boxe-factory/adhesions/adhesion-annuelle-union-boxing-factory" target="_blank" rel="noopener" class="btn btn--red">S'INSCRIRE</a>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="hero hero--compact">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__line"></span>
+        <span class="hero__eyebrow-text">ÉCRIVEZ-NOUS</span>
+      </div>
+      <h1 class="hero__title">CONTACTEZ-<br /><em>NOUS</em></h1>
+    </div>
+  </section>
+
+  <section class="values" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <div class="values__header" style="margin-bottom: 32px;">
+            <span class="section-eyebrow">— Infos directes</span>
+            <h2 class="section-title">CONTACTEZ-<br /><em>NOUS</em></h2>
+          </div>
+          <h3>Siège social</h3>
+          <p style="color:var(--cream-dim);line-height:1.8;margin-bottom:24px;">
+            Union Boxe Factory<br />
+            Espace des associations<br />
+            6 place Robert Schuman<br />
+            67500 Haguenau
+          </p>
+          <h3>Lieu des cours</h3>
+          <p style="color:var(--cream-dim);line-height:1.8;margin-bottom:8px;">
+            Rue de l'Église Saint-Joseph<br />
+            67500 Haguenau
+          </p>
+          <p style="color:var(--cream-dim);font-size:13px;line-height:1.7;margin-bottom:24px;">
+            Mardi · 19h45 – 21h45<br />
+            Dimanche · 9h30 – 10h30 (enfants 6-13 ans)<br />
+            Dimanche · 10h30 – 12h30 (adolescents &amp; adultes)
+          </p>
+          <h3>Email</h3>
+          <p><a href="mailto:unionboxetb@gmail.com" style="color:var(--cream-dim);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--cream-dim)'">unionboxetb@gmail.com</a></p>
+          <h3>Réseaux sociaux</h3>
+          <div class="footer__icons" style="margin-top: 8px;">
+            <a href="https://www.facebook.com/profile.php?id=100071837838686" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <div class="values__header" style="margin-bottom: 32px;">
+            <span class="section-eyebrow">— Formulaire</span>
+            <h2 class="section-title">ENVOYEZ<br /><em>UN MESSAGE</em></h2>
+          </div>
+          <form class="contact-form" onsubmit="return false;">
+            <input type="text" placeholder="NOM &amp; PRÉNOM" aria-label="Nom et prénom" required />
+            <input type="email" placeholder="EMAIL" aria-label="Email" required />
+            <select aria-label="Objet" required>
+              <option value="" disabled selected>OBJET — CHOISIR</option>
+              <option value="cours">Inscription à un cours</option>
+              <option value="stage">Inscription à un stage</option>
+              <option value="intervention">Demande d'intervention</option>
+              <option value="partenariat">Partenariat / Subvention</option>
+              <option value="handicap">Handicap &amp; accessibilité</option>
+              <option value="autre">Autre</option>
+            </select>
+            <textarea placeholder="MESSAGE" aria-label="Message" required></textarea>
+            <button type="submit" class="btn btn--red-solid" style="align-self: flex-start; cursor: pointer;">ENVOYER</button>
+            <p style="font-size:12px;color:var(--cream-dim);line-height:1.6;margin-top:4px;opacity:0.75;">
+              Les informations recueillies via ce formulaire sont utilisées uniquement pour répondre à votre demande. Elles ne sont pas transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" style="margin-top: 0;">
+    <div class="container divider__inner">
+      <span>UNION BOXE FACTORY</span>
+      <span class="divider__dot">✦</span>
+      <span>HAGUENAU</span>
+      <span class="divider__dot">✦</span>
+      <span>CONTACT</span>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="logoUBF.png" alt="Union Boxe Factory" class="footer__logo-img" />
+        <p class="footer__brand-desc">L'EXCELLENCE DE LA BOXE MODERNE<br />DANS UN CADRE HÉRITAGE ÉLITE.</p>
+        <p class="footer__estd">EST. MMXXIV</p>
+        <div class="footer__icons">
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071837838686" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>PAGES</h4>
+        <ul>
+          <li><a href="association.html">L'Association</a></li>
+          <li><a href="interventions.html">Interventions</a></li>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="handicap.html">Boxe & Handicap</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="soutenir.html">Nous soutenir</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__newsletter">
+        <h4>NEWSLETTER</h4>
+        <p>Actualités, plannings et offres exclusives.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="VOTRE EMAIL" aria-label="Email" />
+          <button type="submit">GO</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© 2026 UNION BOXE FACTORY. L'ART DE LA NOBLE SCIENCE.</p>
+      <div><a href="mentions-legales.html#confidentialite">PRIVACY</a><a href="mentions-legales.html">TERMS</a></div>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+</body>
+</html>

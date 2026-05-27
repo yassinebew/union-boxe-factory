@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentions légales — Union Boxe Factory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=9" />
+  <style>
+    .hero { background-image: url('arena-boxing-ring-generative-ai.jpg') !important; }
+    .legal-wrap { max-width: 820px; margin: 0 auto; padding: 72px 0 96px; }
+    .legal-toc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 56px; }
+    .legal-toc a { font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--cream-dim); border: 1px solid rgba(232,220,200,.15); padding: 6px 14px; border-radius: 2px; text-decoration: none; transition: all .2s; }
+    .legal-toc a:hover { color: var(--cream); border-color: rgba(232,220,200,.4); }
+    .legal-chapter { margin-bottom: 64px; }
+    .legal-chapter-title { font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+    .legal-chapter-title::after { content: ''; flex: 1; height: 1px; background: rgba(212,175,55,.2); }
+    .legal-chapter h2 { font-family: var(--font-cond); font-size: clamp(28px,4vw,40px); font-weight: 800; text-transform: uppercase; color: var(--cream); margin-bottom: 32px; line-height: 1; }
+    .legal-section { margin-bottom: 28px; }
+    .legal-section h3 { font-family: var(--font-cond); font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+    .legal-section p { font-family: var(--font-body); font-size: 14px; color: var(--cream-dim); line-height: 1.8; }
+    .legal-section p + p { margin-top: 10px; }
+    .legal-section a { color: var(--cream); text-underline-offset: 3px; }
+    .legal-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 28px; }
+    .legal-info-item { background: var(--bg2); padding: 16px 20px; }
+    .legal-info-item .key { font-family: var(--font-cond); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .legal-info-item .val { font-family: var(--font-body); font-size: 13px; color: var(--cream-dim); line-height: 1.5; }
+    .legal-list { list-style: none; padding: 0; margin-top: 10px; }
+    .legal-list li { font-family: var(--font-body); font-size: 14px; color: var(--cream-dim); line-height: 1.7; padding: 6px 0; border-bottom: 1px solid rgba(232,220,200,.06); display: flex; align-items: flex-start; gap: 10px; }
+    .legal-list li:last-child { border-bottom: none; }
+    .legal-list li::before { content: '—'; color: var(--red); flex-shrink: 0; margin-top: 2px; }
+    .legal-tag { display: inline-block; font-family: var(--font-cond); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: 4px 10px; border-radius: 2px; margin-bottom: 14px; }
+    .legal-tag-rouge { background: rgba(139,26,26,.15); color: #c47070; border: 1px solid rgba(139,26,26,.25); }
+    .legal-tag-or { background: rgba(196,154,56,.12); color: var(--gold); border: 1px solid rgba(196,154,56,.25); }
+    .legal-highlight { background: var(--bg2); border-left: 3px solid var(--red); padding: 16px 20px; margin: 16px 0; font-family: var(--font-body); font-size: 13px; color: var(--cream-dim); line-height: 1.7; }
+    .legal-sep { height: 1px; background: rgba(232,220,200,.07); margin: 48px 0; }
+    @media (max-width: 680px) { .legal-info-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">
+      <a href="index.html"><img src="logoUBF.png" alt="Union Boxe Factory" class="nav__logo-img" /></a>
+    </div>
+    <nav class="nav__links nav__links--full">
+      <a href="index.html">ACCUEIL</a>
+      <a href="association.html">ASSOCIATION</a>
+      <a href="interventions.html">COURS</a>
+      <a href="stages.html">STAGES</a>
+      <a href="handicap.html">HANDICAP</a>
+      <a href="actualites.html">ACTUALITÉS</a>
+      <a href="soutenir.html">SOUTENIR</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="https://www.helloasso.com/associations/union-boxe-factory/adhesions/adhesion-annuelle-union-boxing-factory" target="_blank" rel="noopener" class="btn btn--red">S'INSCRIRE</a>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="hero hero--compact">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__line"></span>
+        <span class="hero__eyebrow-text">TRANSPARENCE & CONFORMITÉ</span>
+      </div>
+      <h1 class="hero__title">INFORMATIONS<br /><em>LÉGALES</em></h1>
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="container">
+      <div class="legal-wrap">
+
+        <!-- SOMMAIRE -->
+        <div class="legal-toc">
+          <a href="#mentions">Mentions légales</a>
+          <a href="#confidentialite">Confidentialité</a>
+          <a href="#cgu">CGU</a>
+          <a href="#cgv">CGV & Remboursements</a>
+        </div>
+
+        <!-- MENTIONS LÉGALES -->
+        <div class="legal-chapter" id="mentions">
+          <div class="legal-chapter-title">01 · Mentions légales</div>
+          <h2>Mentions légales</h2>
+
+          <div class="legal-section">
+            <p>Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l'économie numérique, il est porté à la connaissance des utilisateurs les présentes mentions légales.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Éditeur du site</h3>
+            <div class="legal-info-grid">
+              <div class="legal-info-item"><div class="key">Raison sociale</div><div class="val">Union Boxe Factory</div></div>
+              <div class="legal-info-item"><div class="key">Forme juridique</div><div class="val">Association loi 1901</div></div>
+              <div class="legal-info-item"><div class="key">Siège social</div><div class="val">6, place Robert Schumann, Espace associations, 67500 Haguenau</div></div>
+              <div class="legal-info-item"><div class="key">Email</div><div class="val">unionboxetb@gmail.com</div></div>
+              <div class="legal-info-item"><div class="key">Responsable de publication</div><div class="val">M. BARABINOT Thibaut (Président)</div></div>
+              <div class="legal-info-item"><div class="key">SIREN</div><div class="val">104 713 342</div></div>
+              <div class="legal-info-item"><div class="key">SIRET</div><div class="val">104 713 342 00012</div></div>
+              <div class="legal-info-item"><div class="key">Numéro AMALIA</div><div class="val">A2026HAG000033</div></div>
+              <div class="legal-info-item" style="grid-column: 1 / -1;"><div class="key">Enregistrement</div><div class="val">Registre des Associations du Tribunal de Proximité de Haguenau le 31/03/2026</div></div>
+            </div>
+          </div>
+
+          <div class="legal-section">
+            <h3>Hébergement</h3>
+            <div class="legal-info-grid">
+              <div class="legal-info-item"><div class="key">Société</div><div class="val">o2switch SAS</div></div>
+              <div class="legal-info-item"><div class="key">Téléphone</div><div class="val">04 44 44 60 40</div></div>
+              <div class="legal-info-item"><div class="key">Adresse</div><div class="val">Chemin des Pardiaux, 63000 Clermont-Ferrand</div></div>
+              <div class="legal-info-item"><div class="key">Site web</div><div class="val"><a href="https://www.o2switch.fr" target="_blank" rel="noopener">www.o2switch.fr</a></div></div>
+            </div>
+          </div>
+
+          <div class="legal-section">
+            <h3>Propriété intellectuelle</h3>
+            <p>L'ensemble du contenu du site (textes, images, vidéos, logos, graphismes) est la propriété exclusive de l'association Union Boxe Factory et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle. Toute reproduction, représentation ou modification sans autorisation écrite préalable est interdite.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Limitation de responsabilité</h3>
+            <p>L'association s'efforce d'assurer l'exactitude des informations publiées sur ce site mais ne peut en garantir l'exhaustivité. Elle décline toute responsabilité pour tout dommage résultant de l'utilisation du site ou de l'interprétation de son contenu.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Droit applicable</h3>
+            <p>Tout litige est soumis au droit français. Les tribunaux du ressort de Haguenau sont seuls compétents.</p>
+          </div>
+        </div>
+
+        <div class="legal-sep"></div>
+
+        <!-- POLITIQUE DE CONFIDENTIALITÉ -->
+        <div class="legal-chapter" id="confidentialite">
+          <div class="legal-chapter-title">02 · Confidentialité</div>
+          <h2>Politique de confidentialité</h2>
+          <p style="font-family:var(--font-body);font-size:13px;color:var(--cream-dim);margin-bottom:28px;">Dernière mise à jour : avril 2026</p>
+
+          <div class="legal-section">
+            <h3>Responsable du traitement</h3>
+            <p>Union Boxe Factory — 6, place Robert Schumann, Espace associations, 67500 Haguenau<br />Email : unionboxetb@gmail.com · Président : M. BARABINOT Thibaut</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Données collectées et finalités</h3>
+            <div class="legal-highlight">
+              <strong style="font-family:var(--font-cond);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);display:block;margin-bottom:6px;">Formulaire de contact & séance découverte</strong>
+              Nom, prénom, email, téléphone (optionnel), créneau souhaité et niveau de pratique. Base légale : mesures précontractuelles (art. 6.1.b RGPD). Conservation : 3 ans à compter du dernier contact.
+            </div>
+            <div class="legal-highlight">
+              <strong style="font-family:var(--font-cond);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);display:block;margin-bottom:6px;">Inscription via HelloAsso</strong>
+              Nom, prénom, date de naissance, email, téléphone et informations de paiement. Base légale : exécution d'un contrat (art. 6.1.b RGPD). Conservation : durée de l'adhésion + 5 ans.
+            </div>
+            <p>Toute collecte de données concernant une personne de moins de 15 ans nécessite le consentement écrit du titulaire de l'autorité parentale. Les données des mineurs ne sont jamais utilisées à des fins commerciales.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Destinataires des données</h3>
+            <p>Vos données ne sont jamais vendues ni cédées à des tiers. Elles peuvent être transmises uniquement à nos prestataires dans le cadre strict de leur mission : HelloAsso (gestion des paiements) et o2switch (hébergement). Ces prestataires sont contractuellement tenus de respecter la confidentialité de vos données.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Sécurité</h3>
+            <p>Le site est sécurisé par un certificat SSL garantissant le chiffrement des échanges. En cas de violation de données susceptible d'engendrer un risque pour vos droits et libertés, la CNIL sera notifiée dans les 72 heures et vous serez informé dans les meilleurs délais.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Vos droits</h3>
+            <p>Conformément au RGPD, vous disposez des droits suivants : accès, rectification, effacement, limitation du traitement, portabilité, opposition et retrait du consentement à tout moment.</p>
+            <p>Pour exercer ces droits : <a href="mailto:unionboxetb@gmail.com">unionboxetb@gmail.com</a>. Réponse garantie sous 30 jours. Vous pouvez également introduire une réclamation auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Cookies</h3>
+            <p>Le site utilise uniquement des cookies techniques strictement nécessaires à son fonctionnement. Aucun cookie publicitaire ou de traçage n'est utilisé.</p>
+          </div>
+        </div>
+
+        <div class="legal-sep"></div>
+
+        <!-- CGU -->
+        <div class="legal-chapter" id="cgu">
+          <div class="legal-chapter-title">03 · CGU</div>
+          <h2>Conditions générales d'utilisation</h2>
+          <p style="font-family:var(--font-body);font-size:13px;color:var(--cream-dim);margin-bottom:28px;">Dernière mise à jour : avril 2026</p>
+
+          <div class="legal-section">
+            <h3>Acceptation</h3>
+            <p>Tout accès et toute utilisation du site impliquent l'acceptation sans réserve des présentes conditions générales d'utilisation.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Accès au site</h3>
+            <p>Le site est accessible gratuitement à tout utilisateur disposant d'un accès internet. L'association ne peut être tenue responsable de l'indisponibilité du site pour quelque raison que ce soit, notamment en cas de maintenance, de dysfonctionnement technique ou de force majeure.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Utilisation</h3>
+            <p>Il est strictement interdit d'utiliser le site à des fins :</p>
+            <ul class="legal-list">
+              <li>Illicites ou contraires aux bonnes mœurs</li>
+              <li>Portant atteinte aux droits de propriété intellectuelle de l'association</li>
+              <li>Diffusant des informations fausses ou malveillantes</li>
+              <li>Compromettant la sécurité informatique du site</li>
+              <li>De démarchage commercial sans autorisation préalable écrite</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>Conditions d'inscription</h3>
+            <ul class="legal-list">
+              <li>Les personnes mineures doivent fournir une autorisation écrite de leur représentant légal</li>
+              <li>Un certificat médical de non contre-indication à la pratique sportive est obligatoire pour toute inscription</li>
+              <li>L'association se réserve le droit de refuser une adhésion sans avoir à s'en justifier</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>Séance découverte gratuite</h3>
+            <p>Une séance découverte gratuite et sans engagement est proposée à toute personne souhaitant essayer avant de s'inscrire. Elle est limitée à une séance par personne. Le participant s'engage à respecter le règlement intérieur du club dès sa première présence. L'association décline toute responsabilité en cas d'accident si le participant a fourni des informations médicales inexactes.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Obligations du participant</h3>
+            <ul class="legal-list">
+              <li>Respecter les consignes de sécurité et les instructions des encadrants</li>
+              <li>Informer l'encadrant de tout problème de santé susceptible d'affecter la pratique</li>
+              <li>Respecter les autres pratiquants et les valeurs du club (respect, discipline, dépassement, solidarité)</li>
+              <li>Ne pas se présenter sous l'emprise d'alcool ou de substances illicites</li>
+            </ul>
+            <p style="margin-top:12px;">Tout manquement peut entraîner l'exclusion immédiate sans remboursement.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Droit à l'image</h3>
+            <p>Aucune photographie ou vidéo identifiable d'un mineur ne sera diffusée sans autorisation écrite préalable du représentant légal. Pour les majeurs, une autorisation est demandée lors de l'inscription. Tout consentement peut être retiré à tout moment par email à <a href="mailto:unionboxetb@gmail.com">unionboxetb@gmail.com</a>.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Responsabilité</h3>
+            <p>La pratique des sports de combat comporte des risques inhérents. L'association met en œuvre un encadrement qualifié et un matériel contrôlé. Elle décline toute responsabilité pour les dommages résultant du non-respect des consignes de sécurité, de la dissimulation d'un problème de santé, ou d'un comportement fautif du participant.</p>
+          </div>
+        </div>
+
+        <div class="legal-sep"></div>
+
+        <!-- CGV -->
+        <div class="legal-chapter" id="cgv">
+          <div class="legal-chapter-title">04 · CGV</div>
+          <h2>Conditions générales de vente & remboursements</h2>
+          <p style="font-family:var(--font-body);font-size:13px;color:var(--cream-dim);margin-bottom:28px;">Dernière mise à jour : avril 2026</p>
+
+          <div class="legal-section">
+            <h3>Tarifs en vigueur</h3>
+            <div class="legal-info-grid">
+              <div class="legal-info-item"><div class="key">Cours du mardi (19h45–21h45)</div><div class="val">150 € / an</div></div>
+              <div class="legal-info-item"><div class="key">Cours du dimanche (10h00–12h00)</div><div class="val">150 € / an</div></div>
+              <div class="legal-info-item"><div class="key">Formule Mardi + Dimanche</div><div class="val">190 € / an</div></div>
+              <div class="legal-info-item"><div class="key">Cours particuliers</div><div class="val">50 € / heure</div></div>
+              <div class="legal-info-item" style="grid-column: 1 / -1;"><div class="key">Stages</div><div class="val">Tarifs communiqués pour chaque stage sur le site et via HelloAsso</div></div>
+            </div>
+            <p>Tous les tarifs sont indiqués en euros TTC. L'association se réserve le droit de modifier ses tarifs avec un préavis raisonnable.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Modalités de paiement</h3>
+            <p>Les paiements sont traités exclusivement via <strong style="color:var(--cream);">HelloAsso</strong>, établissement de paiement agréé par l'ACPR (n° 17678Q). Moyens acceptés : carte bancaire (Visa, Mastercard, CB), Apple Pay, Google Pay, virement SEPA. L'association n'a à aucun moment accès aux coordonnées bancaires des payeurs.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Paiement en plusieurs fois</h3>
+            <p>Disponible via HelloAsso. Le premier prélèvement est effectué immédiatement. En cas de rejet d'un prélèvement, l'association se réserve le droit de suspendre l'accès aux activités jusqu'à régularisation.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Politique d'annulation — Adhésions annuelles</h3>
+            <ul class="legal-list">
+              <li>Avant le premier cours : remboursement intégral sous déduction de 10 € de frais administratifs</li>
+              <li>Dans le premier mois : remboursement à hauteur de 75 % du montant annuel</li>
+              <li>Après le premier mois : aucun remboursement, sauf force majeure dûment justifiée (déménagement, longue maladie, perte d'emploi)</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>Politique d'annulation — Stages</h3>
+            <ul class="legal-list">
+              <li>L'acompte de 40 % est non remboursable sauf annulation du stage par l'association</li>
+              <li>Plus de 30 jours avant : remboursement intégral du solde</li>
+              <li>Entre 15 et 30 jours avant : remboursement à hauteur de 50 % du solde</li>
+              <li>Moins de 15 jours avant : aucun remboursement du solde</li>
+            </ul>
+          </div>
+
+          <div class="legal-section">
+            <h3>Politique d'annulation — Cours particuliers</h3>
+            <p>Annulation ou report possible sans frais jusqu'à 24 heures avant la séance. Toute annulation dans les 24 heures précédant la séance entraîne la facturation intégrale, sauf force majeure.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Annulation par l'association</h3>
+            <p>En cas d'annulation hors force majeure, les participants sont remboursés intégralement dans un délai de 14 jours. En cas de force majeure (pandémie, catastrophe naturelle, décision administrative), l'association s'engage à proposer un report ou un avoir.</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>Litiges et médiation</h3>
+            <p>Pour tout litige, contactez l'association à <a href="mailto:unionboxetb@gmail.com">unionboxetb@gmail.com</a>. Réponse sous 15 jours ouvrés. En l'absence de résolution amiable, vous pouvez recourir au médiateur du Sport (coordonnées sur <a href="https://www.cnosf.org" target="_blank" rel="noopener">www.cnosf.org</a>). À défaut, les tribunaux du ressort de Haguenau sont compétents.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="logoUBF.png" alt="Union Boxe Factory" class="footer__logo-img" />
+        <p class="footer__brand-desc">L'EXCELLENCE DE LA BOXE MODERNE<br />DANS UN CADRE HÉRITAGE ÉLITE.</p>
+        <p class="footer__estd">EST. MMXXIV</p>
+        <div class="footer__icons">
+          <a href="https://www.facebook.com/profile.php?id=100071837838686" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>PAGES</h4>
+        <ul>
+          <li><a href="association.html">L'Association</a></li>
+          <li><a href="interventions.html">Interventions</a></li>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="handicap.html">Boxe & Handicap</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="soutenir.html">Nous soutenir</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html" class="active">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__newsletter">
+        <h4>NEWSLETTER</h4>
+        <p>Actualités, plannings et offres exclusives.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="VOTRE EMAIL" aria-label="Email" />
+          <button type="submit">GO</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© 2026 UNION BOXE FACTORY. L'ART DE LA NOBLE SCIENCE.</p>
+      <div><a href="mentions-legales.html#confidentialite">PRIVACY</a><a href="mentions-legales.html">TERMS</a></div>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+</body>
+</html>
