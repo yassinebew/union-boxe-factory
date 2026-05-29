@@ -18,7 +18,24 @@
       "Bash(find C:/Users/Yassi/Desktop -maxdepth 2 -iname *front-view-kids* -o -iname *kids-learning-boxing*)",
       "mcp__Claude_in_Chrome__tabs_context_mcp",
       "mcp__Claude_in_Chrome__navigate",
-      "mcp__Claude_in_Chrome__computer"
+      "mcp__Claude_in_Chrome__computer",
+      "Bash(git config *)",
+      "Bash(curl -s -X POST -H \"Authorization: token $\\(git config --get github.token 2>/dev/null || echo ''\\)\" https://api.github.com/repos/yassinebew/union-boxe-factory/pages)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(curl -s \"https://www.afnic.fr/en/domain-names-and-support/status-of-a-domain-name/?domain=unionboxefactory.fr\")",
+      "Bash(nslookup unionboxefactory.fr ns1.vercel-dns.com)",
+      "Bash(nslookup -type=NS unionboxefactory.fr)",
+      "Bash(nslookup unionboxefactory.fr)",
+      "Bash(powershell -Command \"Compress-Archive -Path 'UBFV2\\\\*.html', 'UBFV2\\\\*.css', 'UBFV2\\\\*.js', 'UBFV2\\\\*.png', 'UBFV2\\\\*.jpg' -DestinationPath 'ubf-site.zip' -Force\")",
+      "Bash(powershell -Command \"\\(Get-Item 'ubf-site.zip'\\).Length / 1MB\")",
+      "Bash(nslookup unionboxefactory.fr 8.8.8.8)",
+      "Bash(nslookup www.unionboxefactory.fr 8.8.8.8)",
+      "Bash(ipconfig /flushdns)",
+      "Bash(xargs ls -lh)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
